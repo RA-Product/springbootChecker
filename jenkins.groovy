@@ -3,7 +3,7 @@ pipeline {
    stages{
        stage('checkout') {
            steps {
-               git branch: 'main', url: 'https://github.com/your-username/Rasolutions.git'
+               git branch: 'main', url: 'https://github.com/RA-Product/springbootChecker.git'
            }
        }
        stage('build') {
@@ -23,7 +23,7 @@ pipeline {
        }
        stage('Archive artifact'){
            steps {
-               archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+              archiveArtifacts artifacts: 'target/Rasolutions-0.0.1-SNAPSHOT.jar', fingerprint: true
            }
        }
    }
