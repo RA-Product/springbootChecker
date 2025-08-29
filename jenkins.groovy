@@ -1,6 +1,10 @@
 pipeline {
     agent any
    stages{
+         tools {
+        jdk 'JDK17'     // configure in Jenkins: Manage Jenkins > Global Tool Config
+        maven 'Maven-3.8.9'   // configure Maven in Jenkins as well
+    }
        stage('checkout') {
            steps {
                git branch: 'main', url: 'https://github.com/RA-Product/springbootChecker.git'
